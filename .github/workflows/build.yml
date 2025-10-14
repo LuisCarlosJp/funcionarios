@@ -69,7 +69,7 @@ jobs:
       - name: Atualizando os valores da imagem
         run: |
           cd kubernetes
-          kustomize edit set imagem imagem=amakusashirou/funcionarios:${{ needs.build.outputs.image_sha }}
+          kustomize edit set image imagem=amakusashirou/funcionarios:${{ needs.build.outputs.image_sha }}
 
       - name: Criando commit tag da imagem
         run: |
